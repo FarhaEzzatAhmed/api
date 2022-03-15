@@ -14,8 +14,8 @@ class DetailsCubit extends Cubit<DetailsState> {
 
   void getAlllaunches(){
     launchesRepository.getAlllaunches().then((value) {
-  emit(launchesLoaded(launches));
-    this.launches = launches ;
+  emit(launchesLoaded(value));
+   // this.launches = launches ;
     });
 
 

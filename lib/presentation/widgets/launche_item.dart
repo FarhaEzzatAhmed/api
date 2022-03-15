@@ -13,7 +13,8 @@ class LauncheItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: 100,
+      height: 100,
       margin: EdgeInsetsDirectional.fromSTEB(8, 8, 8, 8),
       padding:EdgeInsetsDirectional.all(4) ,
       decoration:BoxDecoration(
@@ -22,14 +23,14 @@ class LauncheItem extends StatelessWidget {
 
       ) ,
     child: InkWell(
-      onTap: ()=>Navigator.pushNamed(context, characterDetailsScreen,arguments: Launche),
+      onTap: ()=>Navigator.pushNamed(context, launchesDetailsScreen,arguments: Launche),
       child: GridTile(
         child:Hero(
           tag:Launche.flightNumber ,
         child: Container(
-          color: Mycolors.mygray,
+          //color: Mycolors.mygray,
           child: Text('${Launche.missionName}',style: TextStyle(height: 1.3,
-          fontSize: 16,color: Mycolors.mywhite,
+          fontSize: 16,color: Mycolors.myYellow,
           fontWeight: FontWeight.bold),
           overflow:TextOverflow.ellipsis ,
           maxLines: 2,)

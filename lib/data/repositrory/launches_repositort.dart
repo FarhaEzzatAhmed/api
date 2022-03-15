@@ -5,8 +5,8 @@ class LaunchesRepository{
  final Launcheswebservices launcheswebservices;
 
   LaunchesRepository(this.launcheswebservices);
-  Future<List<dynamic>>getAlllaunches() async{
+  Future<List<launche>>getAlllaunches() async{
     final launches= await launcheswebservices.getAlllaunches();
-    return launches.map((launches) => launches.fromJson(launches)).toList();
+    return launches.map((launches) => launche.fromJson(launches)).toList();
   }
 }

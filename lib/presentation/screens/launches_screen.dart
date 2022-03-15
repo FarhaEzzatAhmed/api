@@ -28,7 +28,7 @@ class LaunchesScreenState extends State<LaunchesScreen> {
        builder:(context,state){
        if(state is launchesLoaded){
          alllaunches=(state).launches;
-         return buildLoadedListwidget();
+         return buildLoadedListwidget((state).launches);
 
        } else {
          return showLoadingIndicator();
@@ -43,18 +43,18 @@ class LaunchesScreenState extends State<LaunchesScreen> {
 
    }
 
-   Widget buildLoadedListwidget (){
-     return SingleChildScrollView(
-       child: Container(
-        color:Mycolors.mygray,
-         child: Column(
-           children:[
-             buildlaunchesList()
-           ],
-         ),
-       ),
+   Widget buildLoadedListwidget (List<launche> list){
+     return ListView.builder(
+     
+     shrinkWrap:true,
+     physics:const ClampingScrollPhysics(),
+     padding:EdgeInsets.zero ,
+     itemCount: list.length,
+     itemBuilder: (ctx,index){
+     
 
-     );
+     return LauncheItem(Launche:list[index],);
+     },);
 
    }
    Widget buildlaunchesList(){
