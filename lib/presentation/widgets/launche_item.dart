@@ -25,10 +25,10 @@ class LauncheItem extends StatelessWidget {
       onTap: ()=>Navigator.pushNamed(context, characterDetailsScreen,arguments: Launche),
       child: GridTile(
         child:Hero(
-          tag:Launche.lanId ,
+          tag:Launche.flightNumber ,
         child: Container(
           color: Mycolors.mygray,
-          child: Text('${Launche.name}',style: TextStyle(height: 1.3,
+          child: Text('${Launche.missionName}',style: TextStyle(height: 1.3,
           fontSize: 16,color: Mycolors.mywhite,
           fontWeight: FontWeight.bold),
           overflow:TextOverflow.ellipsis ,

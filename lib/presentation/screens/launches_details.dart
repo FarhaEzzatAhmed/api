@@ -62,9 +62,9 @@ class LaunchesDetailsScreen extends StatelessWidget {
                   children: [
                     //launchesInfo(': ',Launche.job.join(' ')),
                     //buildDivider(315),
-                    launchesInfo('name ',Launche.name),
+                    launchesInfo('name ',Launche.missionName),
                     buildDivider(315),
-                    launchesInfo('flight_number',Launche.lanId),
+                    launchesInfo('flight_number',Launche.flightNumber.toString()),
                     buildDivider(315),
                     
                   ],

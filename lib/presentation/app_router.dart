@@ -20,8 +20,8 @@ class AppRouter{
   Route? generatRoute(RouteSettings settings){
     switch(settings.name){
       case '/':
-        return MaterialPageRoute(builder:(_)=>BlocProvider(create:(BuildContext)=>launchesCubit,),
-        //child :LaunchesScreen()
+        return MaterialPageRoute(builder:(_)=>BlocProvider(create:(BuildContext)=>launchesCubit,child :LaunchesScreen()),
+        
         );
          
 
