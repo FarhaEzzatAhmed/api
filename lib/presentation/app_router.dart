@@ -7,14 +7,16 @@ import 'package:api/presentation/screens/launches_details.dart';
 import 'package:api/presentation/screens/launches_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../locator.dart';
 class AppRouter{
 
   late LaunchesRepository launchesRepository;
   late DetailsCubit launchesCubit;
 
   AppRouter(){
-    launchesRepository =LaunchesRepository(Launcheswebservices());
-    launchesCubit=DetailsCubit(launchesRepository);
+    //launchesRepository =LaunchesRepository(Launcheswebservices());
+    launchesCubit=DetailsCubit(locator.get<LaunchesRepository>());
   }
 
   Route? generatRoute(RouteSettings settings){

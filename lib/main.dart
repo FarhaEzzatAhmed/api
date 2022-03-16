@@ -1,7 +1,9 @@
+import 'package:api/locator.dart';
 import 'package:api/presentation/app_router.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  setup();
   runApp(MyApp(appRouter: AppRouter(),));
 }
 
